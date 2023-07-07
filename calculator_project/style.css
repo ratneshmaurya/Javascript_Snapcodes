@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+.calculator{
+    min-width:40%;
+    max-width: 60%;
+    height:500px;
+    border:1px solid black;
+}
+.display{
+    text-align: center;
+    width:100%;
+    margin:2px;
+    height:20%;
+    border:1px solid black;
+}
+.btn{
+    margin:1px;
+    text-align: center;
+    display: inline-block;
+    width:23%;
+    height:20%;
+    border:1px solid black;
+}
