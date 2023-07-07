@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+.top-container{
+    width: 100vw;
+    height: 90vh;
+}
+.intro-title{
+    height:10vh;
+    width:100vw;
+    margin-top:4vh;
+    text-align: center;
+}
+.intro-content{
+    display: flex;
+    height: 60vh;
+    width: 100vw;
+}
+.intro-text{
+    opacity:0;
+    transform: translateY(30px);
+    transition: 0.8s all ease-in-out;
+    width:30%;
+    margin: 5vw;
+}
+.intro-text-image{
+    height: 100%;
+    width: 64%;
+}
+.intro-text-image>img{
+    height: 100%;
+    width: 100%;
+}
+.appear{
+    opacity:1;
+    transform: translateY(0px);
+}

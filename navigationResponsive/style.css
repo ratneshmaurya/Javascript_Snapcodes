@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:#274472;
+}
+.logo{
+    color:rgb(231, 223, 223);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+    width:50%;
+    justify-content: space-around;
+    
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration:none;
+    letter-spacing: 2px;
+    font-size: 15px;
+    color:rgb(231, 223, 223);
+}
+/*----------appear on mobile view-------*/
+.burger{
+    display: none;
+    cursor:pointer;
+}
+.burger div{
+    width:20px;
+    height:2px;
+    background-color: rgb(231, 223, 223);
+    margin:5px;
+    transition:all 0.3s ease ;
+}
+/*------------for burger div animation on clicking-----------------*/
+/*we add toggle class to whole burger class, now .toggle .line1 means ki toggle class me line1 class----*/
+
+.toggle .line1{
+    transform:rotate(-45deg) translate(-5px,5px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform:rotate(45deg) translate(-5px,-5px);
+}
+
+
+/*---------------- responsiveness--------------*/
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x:hidden;
+    }
+    .burger{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        right:0px; /*right side rhe pura*/
+        top:8vh;/*bar menu ke neeche aajaaye*/
+        height:92vh;
+        background-color:#274472;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:40%;
+        transform: translateX(100%); /*initially bahar rhe */
+        transition:transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity:0;
+    }
+
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+/*----for that nav-links (on screen mobile)to come in using animation ----*/
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
